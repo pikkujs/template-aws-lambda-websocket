@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "srcDirectories": [
+    "./src"
+  ],
+  "outDir": "./pikku-gen",
+  "tsconfig": "./tsconfig.json",
+  "supportsImportAttributes": true,
+  "fetchFile": "pikku-gen/pikku-fetch.gen.ts",
+  "websocketFile": "pikku-gen/pikku-websocket.gen.ts",
+  "rpcWiringsFile": "pikku-gen/pikku-rpc.gen.ts",
+  "queueWiringsFile": "pikku-gen/pikku-queue.gen.ts",
+  "mcpJsonFile": "pikku-gen/mcp/mcp.gen.json",
+  "middlewareServices": [
+    "jwt"
+  ]
+}
