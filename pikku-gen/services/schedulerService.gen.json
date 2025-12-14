@@ -1,0 +1,17 @@
+{
+  "name": "schedulerService",
+  "summary": "Abstract scheduler service for persistent scheduled task management",
+  "description": "Implementations use queue backends (pg-boss, BullMQ) for distributed scheduling",
+  "package": "@pikku/core",
+  "path": "node_modules/@pikku/core/dist/types/core.types.d.ts",
+  "version": "0.11.2",
+  "interface": "class SchedulerService {\n  init(): Promise<void>;\n  scheduleRPC(delay: number | string, rpcName: string, data?: any, session?: CoreUserSession): Promise<string>;\n  unschedule(taskId: string): Promise<boolean>;\n  getTask(taskId: string): Promise<ScheduledTaskInfo | null>;\n  getAllTasks(): Promise<ScheduledTaskSummary[]>;\n  close(): Promise<void>;\n}",
+  "expandedProperties": {
+    "init": "() => Promise<void>",
+    "scheduleRPC": "(delay: number | string, rpcName: string, data?: any, session?: CoreUserSession) => Promise<string>",
+    "unschedule": "(taskId: string) => Promise<boolean>",
+    "getTask": "(taskId: string) => Promise<ScheduledTaskInfo | null>",
+    "getAllTasks": "() => Promise<ScheduledTaskSummary[]>",
+    "close": "() => Promise<void>"
+  }
+}

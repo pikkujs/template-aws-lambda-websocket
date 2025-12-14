@@ -1,0 +1,172 @@
+{
+  "login": {
+    "pikkuFuncName": "login",
+    "name": "login",
+    "inputSchemaName": "LoginInput",
+    "outputSchemaName": "LoginOutput",
+    "inputs": [
+      "LoginInput"
+    ],
+    "outputs": [
+      "LoginOutput"
+    ]
+  },
+  "getMe": {
+    "pikkuFuncName": "getMe",
+    "name": "getMe",
+    "inputSchemaName": "GetMeInput",
+    "outputSchemaName": "GetMeOutput",
+    "inputs": [
+      "GetMeInput"
+    ],
+    "outputs": [
+      "GetMeOutput"
+    ]
+  },
+  "logout": {
+    "pikkuFuncName": "logout",
+    "name": "logout",
+    "inputSchemaName": "LogoutInput",
+    "outputSchemaName": "LogoutOutput",
+    "inputs": [
+      "LogoutInput"
+    ],
+    "outputs": [
+      "LogoutOutput"
+    ]
+  },
+  "onConnect": {
+    "pikkuFuncName": "onConnect",
+    "name": "onConnect",
+    "inputSchemaName": "OnConnectInput",
+    "outputSchemaName": null,
+    "inputs": [
+      "OnConnectInput"
+    ],
+    "outputs": []
+  },
+  "onDisconnect": {
+    "pikkuFuncName": "onDisconnect",
+    "name": "onDisconnect",
+    "inputSchemaName": null,
+    "outputSchemaName": null,
+    "inputs": [],
+    "outputs": []
+  },
+  "subscribe": {
+    "pikkuFuncName": "subscribe",
+    "name": "subscribe",
+    "inputSchemaName": "SubscribeInput",
+    "outputSchemaName": "SubscribeOutput",
+    "inputs": [
+      "SubscribeInput"
+    ],
+    "outputs": [
+      "SubscribeOutput"
+    ]
+  },
+  "unsubscribe": {
+    "pikkuFuncName": "unsubscribe",
+    "name": "unsubscribe",
+    "inputSchemaName": "UnsubscribeInput",
+    "outputSchemaName": "UnsubscribeOutput",
+    "inputs": [
+      "UnsubscribeInput"
+    ],
+    "outputs": [
+      "UnsubscribeOutput"
+    ]
+  },
+  "listTodos": {
+    "pikkuFuncName": "listTodos",
+    "name": "listTodos",
+    "inputSchemaName": "ListTodosInput",
+    "outputSchemaName": "ListTodosOutput",
+    "inputs": [
+      "ListTodosInput"
+    ],
+    "outputs": [
+      "ListTodosOutput"
+    ]
+  },
+  "getTodo": {
+    "pikkuFuncName": "getTodo",
+    "name": "getTodo",
+    "inputSchemaName": "GetTodoInput",
+    "outputSchemaName": "GetTodoOutput",
+    "inputs": [
+      "GetTodoInput"
+    ],
+    "outputs": [
+      "GetTodoOutput"
+    ]
+  },
+  "createTodo": {
+    "pikkuFuncName": "createTodo",
+    "name": "createTodo",
+    "inputSchemaName": "CreateTodoInput",
+    "outputSchemaName": "CreateTodoOutput",
+    "inputs": [
+      "CreateTodoInput"
+    ],
+    "outputs": [
+      "CreateTodoOutput"
+    ]
+  },
+  "updateTodo": {
+    "pikkuFuncName": "updateTodo",
+    "name": "updateTodo",
+    "inputSchemaName": "UpdateTodoInput",
+    "outputSchemaName": "UpdateTodoOutput",
+    "inputs": [
+      "UpdateTodoInput"
+    ],
+    "outputs": [
+      "UpdateTodoOutput"
+    ]
+  },
+  "deleteTodo": {
+    "pikkuFuncName": "deleteTodo",
+    "name": "deleteTodo",
+    "inputSchemaName": "DeleteTodoInput",
+    "outputSchemaName": "DeleteTodoOutput",
+    "inputs": [
+      "DeleteTodoInput"
+    ],
+    "outputs": [
+      "DeleteTodoOutput"
+    ]
+  },
+  "completeTodo": {
+    "pikkuFuncName": "completeTodo",
+    "name": "completeTodo",
+    "inputSchemaName": "CompleteTodoInput",
+    "outputSchemaName": "CompleteTodoOutput",
+    "inputs": [
+      "CompleteTodoInput"
+    ],
+    "outputs": [
+      "CompleteTodoOutput"
+    ]
+  },
+  "rpcCaller": {
+    "pikkuFuncName": "rpcCaller",
+    "name": "rpcCaller",
+    "inputSchemaName": "RpcCallerInput",
+    "outputSchemaName": null,
+    "inputs": [
+      "RpcCallerInput"
+    ],
+    "outputs": []
+  },
+  "pikkuFn_src_wirings_rpc_wiring_ts_L32C9": {
+    "pikkuFuncName": "pikkuFn_src_wirings_rpc_wiring_ts_L32C9",
+    "name": "pikkuFn_src_wirings_rpc_wiring_ts_L32C9",
+    "inputSchemaName": "PikkuFn_src_wirings_rpc_wiring_ts_L32C9Input",
+    "outputSchemaName": null,
+    "inputs": [
+      "PikkuFn_src_wirings_rpc_wiring_ts_L32C9Input"
+    ],
+    "outputs": []
+  }
+}

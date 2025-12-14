@@ -1,0 +1,15 @@
+{
+  "name": "config",
+  "summary": "",
+  "description": "",
+  "package": "@pikku/core",
+  "path": "node_modules/@pikku/core/dist/types/core.types.d.ts",
+  "version": "0.11.2",
+  "interface": "export interface Config extends CoreConfig {\n  awsRegion: string\n}",
+  "expandedProperties": {
+    "awsRegion": "string",
+    "logLevel": "LogLevel | undefined",
+    "secrets": "{} | undefined",
+    "workflow": "WorkflowServiceConfig | undefined"
+  }
+}

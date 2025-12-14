@@ -1,0 +1,13 @@
+{
+  "name": "jwt",
+  "summary": "Interface for handling JSON Web Tokens (JWT).",
+  "description": "",
+  "package": "test-app",
+  "path": "types/application-types.d.ts",
+  "version": "0.0.0",
+  "interface": "export interface JWTService {\n    /**\n     * Encodes a payload into a JWT.\n     * @param expiresIn - The expiration time of the token.\n     * @param payload - The payload to encode.\n     * @returns A promise that resolves to the encoded JWT.\n     */\n    encode: <T extends any>(expiresIn: RelativeTimeInput, payload: T) => Promise<string>;\n    /**\n     * Decodes a JWT into its payload.\n     * @param hash - The JWT to decode.\n     * @param invalidHashError - An optional error to throw if the hash is invalid.\n     * @param debug - An optional flag for debugging.\n     * @returns A promise that resolves to the decoded payload.\n     */\n    decode: <T>(hash: string, invalidHashError?: Error, debug?: boolean) => Promise<T>;\n}",
+  "expandedProperties": {
+    "encode": "<T extends unknown>(expiresIn: RelativeTimeInput, payload: T) => Promise<string>",
+    "decode": "<T>(hash: string, invalidHashError?: Error, debug?: boolean) => Promise<T>"
+  }
+}

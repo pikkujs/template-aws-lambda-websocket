@@ -1,0 +1,297 @@
+{
+  "login": {
+    "pikkuFuncName": "login",
+    "name": "login",
+    "services": {
+      "optimized": false,
+      "services": []
+    },
+    "usedWires": [
+      "session"
+    ],
+    "inputSchemaName": "LoginInput",
+    "outputSchemaName": "LoginOutput",
+    "inputs": [
+      "LoginInput"
+    ],
+    "outputs": [
+      "LoginOutput"
+    ],
+    "isDirectFunction": false
+  },
+  "getMe": {
+    "pikkuFuncName": "getMe",
+    "name": "getMe",
+    "services": {
+      "optimized": false,
+      "services": []
+    },
+    "usedWires": [
+      "initialSession"
+    ],
+    "inputSchemaName": "GetMeInput",
+    "outputSchemaName": "GetMeOutput",
+    "inputs": [
+      "GetMeInput"
+    ],
+    "outputs": [
+      "GetMeOutput"
+    ],
+    "isDirectFunction": false
+  },
+  "logout": {
+    "pikkuFuncName": "logout",
+    "name": "logout",
+    "services": {
+      "optimized": false,
+      "services": []
+    },
+    "usedWires": [
+      "session"
+    ],
+    "inputSchemaName": "LogoutInput",
+    "outputSchemaName": "LogoutOutput",
+    "inputs": [
+      "LogoutInput"
+    ],
+    "outputs": [
+      "LogoutOutput"
+    ],
+    "isDirectFunction": false
+  },
+  "onConnect": {
+    "pikkuFuncName": "onConnect",
+    "name": "onConnect",
+    "services": {
+      "optimized": true,
+      "services": [
+        "logger"
+      ]
+    },
+    "usedWires": [
+      "channel"
+    ],
+    "inputSchemaName": "OnConnectInput",
+    "outputSchemaName": null,
+    "inputs": [
+      "OnConnectInput"
+    ],
+    "outputs": [],
+    "isDirectFunction": true
+  },
+  "onDisconnect": {
+    "pikkuFuncName": "onDisconnect",
+    "name": "onDisconnect",
+    "services": {
+      "optimized": true,
+      "services": [
+        "logger"
+      ]
+    },
+    "usedWires": [
+      "channel"
+    ],
+    "inputSchemaName": null,
+    "outputSchemaName": null,
+    "inputs": [],
+    "outputs": [],
+    "isDirectFunction": true
+  },
+  "subscribe": {
+    "pikkuFuncName": "subscribe",
+    "name": "subscribe",
+    "services": {
+      "optimized": true,
+      "services": [
+        "eventHub",
+        "logger"
+      ]
+    },
+    "usedWires": [
+      "channel"
+    ],
+    "inputSchemaName": "SubscribeInput",
+    "outputSchemaName": "SubscribeOutput",
+    "inputs": [
+      "SubscribeInput"
+    ],
+    "outputs": [
+      "SubscribeOutput"
+    ],
+    "isDirectFunction": false
+  },
+  "unsubscribe": {
+    "pikkuFuncName": "unsubscribe",
+    "name": "unsubscribe",
+    "services": {
+      "optimized": true,
+      "services": [
+        "eventHub",
+        "logger"
+      ]
+    },
+    "usedWires": [
+      "channel"
+    ],
+    "inputSchemaName": "UnsubscribeInput",
+    "outputSchemaName": "UnsubscribeOutput",
+    "inputs": [
+      "UnsubscribeInput"
+    ],
+    "outputs": [
+      "UnsubscribeOutput"
+    ],
+    "isDirectFunction": false
+  },
+  "listTodos": {
+    "pikkuFuncName": "listTodos",
+    "name": "listTodos",
+    "services": {
+      "optimized": true,
+      "services": [
+        "logger"
+      ]
+    },
+    "inputSchemaName": "ListTodosInput",
+    "outputSchemaName": "ListTodosOutput",
+    "inputs": [
+      "ListTodosInput"
+    ],
+    "outputs": [
+      "ListTodosOutput"
+    ],
+    "isDirectFunction": false
+  },
+  "getTodo": {
+    "pikkuFuncName": "getTodo",
+    "name": "getTodo",
+    "services": {
+      "optimized": true,
+      "services": [
+        "logger"
+      ]
+    },
+    "inputSchemaName": "GetTodoInput",
+    "outputSchemaName": "GetTodoOutput",
+    "inputs": [
+      "GetTodoInput"
+    ],
+    "outputs": [
+      "GetTodoOutput"
+    ],
+    "isDirectFunction": false
+  },
+  "createTodo": {
+    "pikkuFuncName": "createTodo",
+    "name": "createTodo",
+    "services": {
+      "optimized": true,
+      "services": [
+        "logger",
+        "eventHub"
+      ]
+    },
+    "inputSchemaName": "CreateTodoInput",
+    "outputSchemaName": "CreateTodoOutput",
+    "inputs": [
+      "CreateTodoInput"
+    ],
+    "outputs": [
+      "CreateTodoOutput"
+    ],
+    "isDirectFunction": false
+  },
+  "updateTodo": {
+    "pikkuFuncName": "updateTodo",
+    "name": "updateTodo",
+    "services": {
+      "optimized": true,
+      "services": [
+        "logger",
+        "eventHub"
+      ]
+    },
+    "inputSchemaName": "UpdateTodoInput",
+    "outputSchemaName": "UpdateTodoOutput",
+    "inputs": [
+      "UpdateTodoInput"
+    ],
+    "outputs": [
+      "UpdateTodoOutput"
+    ],
+    "isDirectFunction": false
+  },
+  "deleteTodo": {
+    "pikkuFuncName": "deleteTodo",
+    "name": "deleteTodo",
+    "services": {
+      "optimized": true,
+      "services": [
+        "logger",
+        "eventHub"
+      ]
+    },
+    "inputSchemaName": "DeleteTodoInput",
+    "outputSchemaName": "DeleteTodoOutput",
+    "inputs": [
+      "DeleteTodoInput"
+    ],
+    "outputs": [
+      "DeleteTodoOutput"
+    ],
+    "isDirectFunction": false
+  },
+  "completeTodo": {
+    "pikkuFuncName": "completeTodo",
+    "name": "completeTodo",
+    "services": {
+      "optimized": true,
+      "services": [
+        "logger",
+        "eventHub"
+      ]
+    },
+    "inputSchemaName": "CompleteTodoInput",
+    "outputSchemaName": "CompleteTodoOutput",
+    "inputs": [
+      "CompleteTodoInput"
+    ],
+    "outputs": [
+      "CompleteTodoOutput"
+    ],
+    "isDirectFunction": false
+  },
+  "rpcCaller": {
+    "pikkuFuncName": "rpcCaller",
+    "name": "rpcCaller",
+    "services": {
+      "optimized": false,
+      "services": []
+    },
+    "usedWires": [
+      "rpc"
+    ],
+    "inputSchemaName": "RpcCallerInput",
+    "outputSchemaName": null,
+    "inputs": [
+      "RpcCallerInput"
+    ],
+    "outputs": [],
+    "isDirectFunction": false
+  },
+  "pikkuFn_src_wirings_rpc_wiring_ts_L32C9": {
+    "pikkuFuncName": "pikkuFn_src_wirings_rpc_wiring_ts_L32C9",
+    "name": "pikkuFn_src_wirings_rpc_wiring_ts_L32C9",
+    "services": {
+      "optimized": true,
+      "services": []
+    },
+    "inputSchemaName": "PikkuFn_src_wirings_rpc_wiring_ts_L32C9Input",
+    "outputSchemaName": null,
+    "inputs": [
+      "PikkuFn_src_wirings_rpc_wiring_ts_L32C9Input"
+    ],
+    "outputs": [],
+    "isDirectFunction": true
+  }
+}

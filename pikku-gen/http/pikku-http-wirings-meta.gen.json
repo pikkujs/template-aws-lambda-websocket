@@ -1,0 +1,114 @@
+{
+  "get": {
+    "/auth/me": {
+      "pikkuFuncName": "getMe",
+      "route": "/auth/me",
+      "method": "get",
+      "tags": [
+        "auth"
+      ]
+    },
+    "/todos": {
+      "pikkuFuncName": "listTodos",
+      "route": "/todos",
+      "method": "get",
+      "tags": [
+        "todos"
+      ]
+    },
+    "/todos/:id": {
+      "pikkuFuncName": "getTodo",
+      "route": "/todos/:id",
+      "method": "get",
+      "params": [
+        "id"
+      ],
+      "tags": [
+        "todos"
+      ]
+    }
+  },
+  "post": {
+    "/auth/login": {
+      "pikkuFuncName": "login",
+      "route": "/auth/login",
+      "method": "post",
+      "tags": [
+        "auth"
+      ]
+    },
+    "/auth/logout": {
+      "pikkuFuncName": "logout",
+      "route": "/auth/logout",
+      "method": "post",
+      "tags": [
+        "auth"
+      ]
+    },
+    "/rpc/:rpcName": {
+      "pikkuFuncName": "rpcCaller",
+      "route": "/rpc/:rpcName",
+      "method": "post",
+      "params": [
+        "rpcName"
+      ]
+    },
+    "/todos": {
+      "pikkuFuncName": "createTodo",
+      "route": "/todos",
+      "method": "post",
+      "tags": [
+        "todos"
+      ]
+    },
+    "/todos/:id/complete": {
+      "pikkuFuncName": "completeTodo",
+      "route": "/todos/:id/complete",
+      "method": "post",
+      "params": [
+        "id"
+      ],
+      "tags": [
+        "todos"
+      ]
+    }
+  },
+  "put": {
+    "/todos/:id": {
+      "pikkuFuncName": "updateTodo",
+      "route": "/todos/:id",
+      "method": "put",
+      "params": [
+        "id"
+      ],
+      "tags": [
+        "todos"
+      ]
+    }
+  },
+  "delete": {
+    "/todos/:id": {
+      "pikkuFuncName": "deleteTodo",
+      "route": "/todos/:id",
+      "method": "delete",
+      "params": [
+        "id"
+      ],
+      "tags": [
+        "todos"
+      ]
+    }
+  },
+  "head": {},
+  "patch": {},
+  "options": {
+    "/rpc/:rpcName": {
+      "pikkuFuncName": "pikkuFn_src_wirings_rpc_wiring_ts_L32C9",
+      "route": "/rpc/:rpcName",
+      "method": "options",
+      "params": [
+        "rpcName"
+      ]
+    }
+  }
+}

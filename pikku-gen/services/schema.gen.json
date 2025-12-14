@@ -1,0 +1,14 @@
+{
+  "name": "schema",
+  "summary": "Interface for a schema service that handles schema compilation, validation, and management.",
+  "description": "",
+  "package": "@pikku/core",
+  "path": "node_modules/@pikku/core/dist/types/core.types.d.ts",
+  "version": "0.11.2",
+  "interface": "export interface SchemaService {\n    /**\n     * Compiles a schema with the provided name and value, making it available for use.\n     * @param {string} name - The unique name for the schema.\n     * @param {any} value - The schema definition or configuration to be compiled.\n     * @returns {Promise<void> | void} A promise if asynchronous, or void if synchronous.\n     */\n    compileSchema: (name: string, value: any) => Promise<void> | void;\n    /**\n     * Validates data against a specified schema.\n     * @param {string} schema - The name of the schema to validate against.\n     * @param {any} data - The data to validate against the schema.\n     * @returns {Promise<void> | void} A promise if asynchronous, or void if synchronous.\n     */\n    validateSchema: (schema: string, data: any) => Promise<void> | void;\n    /**\n     * Retrieves a set of all registered schema names.\n     * @returns {Set<string>} A set containing the names of all available schemas.\n     */\n    getSchemaNames: () => Set<string>;\n}",
+  "expandedProperties": {
+    "compileSchema": "(name: string, value: any) => Promise<void> | void",
+    "validateSchema": "(schema: string, data: any) => Promise<void> | void",
+    "getSchemaNames": "() => Set<string>"
+  }
+}

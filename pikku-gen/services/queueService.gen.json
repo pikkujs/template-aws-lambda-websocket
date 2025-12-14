@@ -1,0 +1,14 @@
+{
+  "name": "queueService",
+  "summary": "Queue provider interface for job publishing operations",
+  "description": "",
+  "package": "test-app",
+  "path": "types/application-types.d.ts",
+  "version": "0.0.0",
+  "interface": "export interface QueueService {\n    /** Whether this queue provider supports job results */\n    readonly supportsResults: boolean;\n    /** Add a job to the queue with type safety */\n    add<T>(queueName: string, data: T, options?: JobOptions): Promise<string>;\n    /** Get job status and result */\n    getJob<T, R>(queueName: string, jobId: string): Promise<QueueJob<T, R> | null>;\n}",
+  "expandedProperties": {
+    "supportsResults": "boolean",
+    "add": "<T>(queueName: string, data: T, options?: JobOptions) => Promise<string>",
+    "getJob": "<T, R>(queueName: string, jobId: string) => Promise<QueueJob<T, R> | null>"
+  }
+}
