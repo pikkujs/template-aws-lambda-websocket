@@ -1,0 +1,31 @@
+{
+  "name": "workflowService",
+  "summary": "Interface for workflow orchestration",
+  "description": "Handles workflow execution, replay, orchestration logic, and run-level state",
+  "package": "@pikku/core",
+  "path": "node_modules/@pikku/core/dist/types/core.types.d.ts",
+  "version": "0.11.2",
+  "interface": "export interface WorkflowService {\n    createRun(workflowName: string, input: any, inline?: boolean): Promise<string>;\n    getRun(id: string): Promise<WorkflowRun | null>;\n    getRunHistory(runId: string): Promise<Array<StepState & {\n        stepName: string;\n    }>>;\n    updateRunStatus(id: string, status: WorkflowStatus, output?: any, error?: SerializedError): Promise<void>;\n    withRunLock<T>(id: string, fn: () => Promise<T>): Promise<T>;\n    close(): Promise<void>;\n    resumeWorkflow(runId: string): Promise<void>;\n    setServices(singletonServices: CoreSingletonServices, createWireServices: CreateWireServices, config: CoreConfig): void;\n    startWorkflow<I>(name: string, input: I, rpcService: any, options?: {\n        inline?: boolean;\n        startNode?: string;\n    }): Promise<{\n        runId: string;\n    }>;\n    runWorkflowJob(runId: string, rpcService: any): Promise<void>;\n    orchestrateWorkflow(runId: string, rpcService: any): Promise<void>;\n    executeWorkflowSleepCompleted(runId: string, stepId: string): Promise<void>;\n    insertStepState(runId: string, stepName: string, rpcName: string, data: any, stepOptions?: {\n        retries?: number;\n        retryDelay?: string | number;\n    }): Promise<StepState>;\n    getStepState(runId: string, stepName: string): Promise<StepState>;\n    setStepRunning(stepId: string): Promise<void>;\n    setStepScheduled(stepId: string): Promise<void>;\n    setStepResult(stepId: string, result: any): Promise<void>;\n    setStepError(stepId: string, error: Error): Promise<void>;\n    createRetryAttempt(stepId: string, status: 'pending' | 'running'): Promise<StepState>;\n    executeWorkflowStep(runId: string, stepName: string, rpcName: string | null, data: any, rpcService: any): Promise<void>;\n}",
+  "expandedProperties": {
+    "createRun": "(workflowName: string, input: any, inline?: boolean) => Promise<string>",
+    "getRun": "(id: string) => Promise<WorkflowRun | null>",
+    "getRunHistory": "(runId: string) => Promise<Array<StepState & { stepName: string; }>>",
+    "updateRunStatus": "(id: string, status: WorkflowStatus, output?: any, error?: SerializedError) => Promise<void>",
+    "withRunLock": "<T>(id: string, fn: () => Promise<T>) => Promise<T>",
+    "close": "() => Promise<void>",
+    "resumeWorkflow": "(runId: string) => Promise<void>",
+    "setServices": "(singletonServices: CoreSingletonServices, createWireServices: CreateWireServices, config: CoreConfig) => void",
+    "startWorkflow": "<I>(name: string, input: I, rpcService: any, options?: { inline?: boolean; startNode?: string; }) => Promise<{ runId: string; }>",
+    "runWorkflowJob": "(runId: string, rpcService: any) => Promise<void>",
+    "orchestrateWorkflow": "(runId: string, rpcService: any) => Promise<void>",
+    "executeWorkflowSleepCompleted": "(runId: string, stepId: string) => Promise<void>",
+    "insertStepState": "(runId: string, stepName: string, rpcName: string, data: any, stepOptions?: { retries?: number; retryDelay?: string | number; }) => Promise<StepState>",
+    "getStepState": "(runId: string, stepName: string) => Promise<StepState>",
+    "setStepRunning": "(stepId: string) => Promise<void>",
+    "setStepScheduled": "(stepId: string) => Promise<void>",
+    "setStepResult": "(stepId: string, result: any) => Promise<void>",
+    "setStepError": "(stepId: string, error: Error) => Promise<void>",
+    "createRetryAttempt": "(stepId: string, status: \"pending\" | \"running\") => Promise<StepState>",
+    "executeWorkflowStep": "(runId: string, stepName: string, rpcName: string | null, data: any, rpcService: any) => Promise<void>"
+  }
+}

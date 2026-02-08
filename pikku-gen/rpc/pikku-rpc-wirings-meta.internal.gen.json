@@ -1,0 +1,20 @@
+{
+  "login": "login",
+  "getMe": "getMe",
+  "logout": "logout",
+  "onConnect": "onConnect",
+  "onDisconnect": "onDisconnect",
+  "subscribe": "subscribe",
+  "unsubscribe": "unsubscribe",
+  "greet": "greet",
+  "remoteGreet": "remoteGreet",
+  "listTodos": "listTodos",
+  "getTodo": "getTodo",
+  "createTodo": "createTodo",
+  "updateTodo": "updateTodo",
+  "deleteTodo": "deleteTodo",
+  "completeTodo": "completeTodo",
+  "testEventTrigger": "testEventTrigger",
+  "onTestEvent": "onTestEvent",
+  "rpcCaller": "rpcCaller"
+}

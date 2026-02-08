@@ -1,0 +1,24 @@
+{
+  "name": "todoStore",
+  "summary": "Singleton in-memory store for todos and users.",
+  "description": "Persists during server lifetime.",
+  "package": "test-app",
+  "path": "types/application-types.d.ts",
+  "version": "0.0.0",
+  "interface": "class TodoStore {\n  constructor();\n  getUserByUsername(username: string): User | undefined;\n  getUserById(id: string): User | undefined;\n  createTodo(userId: string, data: Omit<Todo, 'id' | 'userId' | 'createdAt' | 'updatedAt'>): Todo;\n  getTodo(id: string): Todo | undefined;\n  getTodosByUser(userId: string, filters?: {\n      completed?: boolean\n      priority?: 'low' | 'medium' | 'high'\n      tag?: string\n    }): Todo[];\n  updateTodo(id: string, data: Partial<Omit<Todo, 'id' | 'userId' | 'createdAt'>>): Todo | undefined;\n  deleteTodo(id: string): boolean;\n  completeTodo(id: string): Todo | undefined;\n  getStats(userId: string): {\n    total: number\n    completed: number\n    pending: number\n  };\n  getOverdueTodos(userId: string): Todo[];\n}",
+  "expandedProperties": {
+    "todos": "Map<string, { id: string; userId: string; title: string; completed: boolean; priority: \"low\" | \"medium\" | \"high\"; tags: string[]; createdAt: string; updatedAt: string; description?: string; dueDate?: string; }>",
+    "users": "Map<string, { id: string; username: string; email: string; }>",
+    "idCounter": "number",
+    "getUserByUsername": "(username: string) => User | undefined",
+    "getUserById": "(id: string) => User | undefined",
+    "createTodo": "(userId: string, data: Omit<Todo, \"id\" | \"userId\" | \"createdAt\" | \"updatedAt\">) => Todo",
+    "getTodo": "(id: string) => Todo | undefined",
+    "getTodosByUser": "(userId: string, filters?: { completed?: boolean; priority?: \"low\" | \"medium\" | \"high\"; tag?: string; }) => Todo[]",
+    "updateTodo": "(id: string, data: Partial<Omit<Todo, \"id\" | \"userId\" | \"createdAt\">>) => Todo | undefined",
+    "deleteTodo": "(id: string) => boolean",
+    "completeTodo": "(id: string) => Todo | undefined",
+    "getStats": "(userId: string) => { total: number; completed: number; pending: number; }",
+    "getOverdueTodos": "(userId: string) => Todo[]"
+  }
+}

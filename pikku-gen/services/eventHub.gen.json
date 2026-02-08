@@ -1,0 +1,14 @@
+{
+  "name": "eventHub",
+  "summary": "Interface defining the methods of a EventHub Service.",
+  "description": "",
+  "package": "test-app",
+  "path": "types/application-types.d.ts",
+  "version": "0.0.0",
+  "interface": "export interface EventHubService<Topics extends Record<string, any>> {\n    /**\n     * Subscribes a connection to a specific topic.\n     * @param topic - The topic to subscribe to.\n     * @param channelId - The unique ID of the connection to subscribe.\n     */\n    subscribe<T extends keyof Topics>(topic: T, channelId: string): Promise<void> | void;\n    /**\n     * Unsubscribes a connection from a specific topic.\n     * @param topic - The topic to unsubscribe from.\n     * @param channelId - The unique ID of the connection to unsubscribe.\n     */\n    unsubscribe<T extends keyof Topics>(topic: T, channelId: string): Promise<void> | void;\n    /**\n     * Sends data to all connections subscribed to a topic.\n     * @param topic - The topic to send data to.\n     * @param data - The data to send to the subscribers.\n     */\n    publish<T extends keyof Topics>(topic: T, channelId: string | null, data: Topics[T], isBinary?: boolean): Promise<void> | void;\n}",
+  "expandedProperties": {
+    "subscribe": "<T extends keyof import(\"/home/runner/work/pikku/test-app/types/eventhub-topics\").EventHubTopics>(topic: T, channelId: string) => Promise<void> | void",
+    "unsubscribe": "<T extends keyof import(\"/home/runner/work/pikku/test-app/types/eventhub-topics\").EventHubTopics>(topic: T, channelId: string) => Promise<void> | void",
+    "publish": "<T extends keyof import(\"/home/runner/work/pikku/test-app/types/eventhub-topics\").EventHubTopics>(topic: T, channelId: string | null, data: import(\"/home/runner/work/pikku/test-app/types/eventhub-topics\").EventHubTopics[T], isBinary?: boolean) => Promise<void> | void"
+  }
+}

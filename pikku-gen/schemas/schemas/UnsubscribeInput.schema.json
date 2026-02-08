@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":{"topic":{"type":"string","enum":["todo-created","todo-updated","todo-deleted","todo-completed"],"description":"Event topic to unsubscribe from"}},"required":["topic"],"additionalProperties":false}
