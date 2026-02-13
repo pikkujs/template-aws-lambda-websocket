@@ -1,0 +1,1 @@
+{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":{"completed":{"type":"boolean"},"priority":{"type":"string","enum":["low","medium","high"]},"tag":{"type":"string"},"userId":{"description":"User ID (uses demo user if not provided)","type":"string"}},"additionalProperties":false}

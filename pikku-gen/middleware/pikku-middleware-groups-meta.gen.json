@@ -1,0 +1,16 @@
+{
+  "httpGroups": {
+    "*": {
+      "exportName": "httpAuthMiddleware",
+      "sourceFile": "/home/runner/work/pikku/test-app/src/middleware.ts",
+      "position": 360,
+      "services": {
+        "optimized": false,
+        "services": []
+      },
+      "middlewareCount": 1,
+      "isFactory": true
+    }
+  },
+  "tagGroups": {}
+}
