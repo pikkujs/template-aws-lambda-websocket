@@ -1,0 +1,17 @@
+{
+  "name": "logger",
+  "summary": "Interface for logging messages at various levels.",
+  "description": "",
+  "package": "@pikku/core",
+  "path": "node_modules/@pikku/core/dist/types/core.types.d.ts",
+  "version": "0.11.2",
+  "interface": "export interface Logger {\n    /**\n     * Logs an informational message.\n     * @param messageOrObj - The message or object to log.\n     * @param meta - Additional metadata to log.\n     */\n    info(messageOrObj: string | Record<string, any>, ...meta: any[]): void;\n    /**\n     * Logs a warning message.\n     * @param messageOrObj - The message or object to log.\n     * @param meta - Additional metadata to log.\n     */\n    warn(messageOrObj: string | Record<string, any>, ...meta: any[]): void;\n    /**\n     * Logs an error message.\n     * @param messageOrObj - The message, object, or error to log.\n     * @param meta - Additional metadata to log.\n     */\n    error(messageOrObj: string | Record<string, any> | Error, ...meta: any[]): void;\n    /**\n     * Logs a debug message.\n     * @param message - The message to log.\n     * @param meta - Additional metadata to log.\n     */\n    debug(message: string, ...meta: any[]): void;\n    /**\n     * Logs a trace message.\n     * @param message - The message to log.\n     * @param meta - Additional metadata to log.\n     */\n    trace?(message: string, ...meta: any[]): void;\n    /**\n     * Sets the logging level.\n     * @param level - The logging level to set.\n     */\n    setLevel(level: LogLevel): void;\n}",
+  "expandedProperties": {
+    "info": "(messageOrObj: string | Record<string, any>, ...meta: any[]) => void",
+    "warn": "(messageOrObj: string | Record<string, any>, ...meta: any[]) => void",
+    "error": "(messageOrObj: string | Record<string, any> | Error, ...meta: any[]) => void",
+    "debug": "(message: string, ...meta: any[]) => void",
+    "trace": "(message: string, ...meta: any[]) => void | undefined",
+    "setLevel": "(level: LogLevel) => void"
+  }
+}

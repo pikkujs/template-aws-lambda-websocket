@@ -1,0 +1,22 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "srcDirectories": [
+    "./src",
+    "./types"
+  ],
+  "outDir": "./pikku-gen",
+  "tsconfig": "./tsconfig.json",
+  "schema": {
+    "supportsImportAttributes": true
+  },
+  "verboseMeta": true,
+  "websocketFile": ".pikku/pikku-websocket.gen.ts",
+  "agent": {
+    "publicAgentPath": "src/wirings/agent.wiring.gen.ts"
+  },
+  "cli": {
+    "entrypoints": {
+      "todo-cli": "client/cli-local.gen.ts"
+    }
+  }
+}

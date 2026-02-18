@@ -1,0 +1,115 @@
+{
+  "get": {
+    "/auth/me": {
+      "pikkuFuncName": "getMe",
+      "route": "/auth/me",
+      "method": "get",
+      "tags": [
+        "auth"
+      ],
+      "middleware": [
+        {
+          "type": "http",
+          "route": "*"
+        }
+      ]
+    }
+  },
+  "post": {
+    "/auth/login": {
+      "pikkuFuncName": "login",
+      "route": "/auth/login",
+      "method": "post",
+      "tags": [
+        "auth"
+      ],
+      "middleware": [
+        {
+          "type": "http",
+          "route": "*"
+        }
+      ]
+    },
+    "/auth/logout": {
+      "pikkuFuncName": "logout",
+      "route": "/auth/logout",
+      "method": "post",
+      "tags": [
+        "auth"
+      ],
+      "middleware": [
+        {
+          "type": "http",
+          "route": "*"
+        }
+      ]
+    },
+    "/workflow/review": {
+      "pikkuFuncName": "pikkuFn_src_wirings_graph_wiring_ts_L8C9",
+      "route": "/workflow/review",
+      "method": "post",
+      "middleware": [
+        {
+          "type": "http",
+          "route": "*"
+        }
+      ]
+    },
+    "/greet": {
+      "pikkuFuncName": "greet",
+      "route": "/greet",
+      "method": "post",
+      "middleware": [
+        {
+          "type": "http",
+          "route": "*"
+        }
+      ]
+    },
+    "/remote-greet": {
+      "pikkuFuncName": "remoteGreet",
+      "route": "/remote-greet",
+      "method": "post",
+      "middleware": [
+        {
+          "type": "http",
+          "route": "*"
+        }
+      ]
+    },
+    "/rpc/:rpcName": {
+      "pikkuFuncName": "rpcCaller",
+      "route": "/rpc/:rpcName",
+      "method": "post",
+      "params": [
+        "rpcName"
+      ],
+      "middleware": [
+        {
+          "type": "http",
+          "route": "*"
+        }
+      ]
+    }
+  },
+  "put": {},
+  "delete": {},
+  "head": {},
+  "patch": {},
+  "options": {
+    "/rpc/:rpcName": {
+      "pikkuFuncName": "pikkuFn_src_wirings_rpc_wiring_ts_L31C9",
+      "route": "/rpc/:rpcName",
+      "method": "options",
+      "params": [
+        "rpcName"
+      ],
+      "middleware": [
+        {
+          "type": "http",
+          "route": "*"
+        }
+      ]
+    }
+  }
+}

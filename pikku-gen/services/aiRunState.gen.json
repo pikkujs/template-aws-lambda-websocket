@@ -1,0 +1,10 @@
+{
+  "name": "aiRunState",
+  "summary": "",
+  "description": "",
+  "package": "test-app",
+  "path": "types/application-types.d.ts",
+  "version": "0.0.0",
+  "interface": "AIRunStateService",
+  "expandedProperties": {}
+}

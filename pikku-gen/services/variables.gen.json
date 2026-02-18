@@ -1,0 +1,13 @@
+{
+  "name": "variables",
+  "summary": "",
+  "description": "",
+  "package": "@pikku/core",
+  "path": "node_modules/@pikku/core/dist/types/core.types.d.ts",
+  "version": "0.11.2",
+  "interface": "export interface VariablesService {\n    get: (name: string) => Promise<string | undefined> | string | undefined;\n    getAll: () => Promise<Record<string, string | undefined>> | Record<string, string | undefined>;\n}",
+  "expandedProperties": {
+    "get": "(name: string) => Promise<string | undefined> | string | undefined",
+    "getAll": "() => Promise<Record<string, string | undefined>> | Record<string, string | undefined>"
+  }
+}
