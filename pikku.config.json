@@ -1,0 +1,47 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "srcDirectories": [
+    "./src",
+    "./types"
+  ],
+  "outDir": "./pikku-gen",
+  "tsconfig": "./tsconfig.json",
+  "schema": {
+    "supportsImportAttributes": true
+  },
+  "verboseMeta": true,
+  "clientFiles": {
+    "websocketFile": ".pikku/pikku-websocket.gen.ts",
+    "realtimeFile": ".pikku/pikku-realtime.gen.ts"
+  },
+  "forceRequiredServices": [
+    "todoStore"
+  ],
+  "deploy": {
+    "serverlessIncompatible": [
+      "metaService",
+      "stateDiffService",
+      "codeEditService"
+    ]
+  },
+  "scaffold": {
+    "rpc": "no-auth",
+    "agent": "no-auth",
+    "workflow": "no-auth",
+    "console": "no-auth",
+    "events": "no-auth",
+    "pikkuDir": "pikku"
+  },
+  "cli": {
+    "entrypoints": {
+      "todo-cli": [
+        "client/cli-local.gen.ts",
+        {
+          "type": "channel",
+          "wirePath": "src/wirings/cli-channel.gen.ts",
+          "path": "client/cli-client.gen.ts"
+        }
+      ]
+    }
+  }
+}
