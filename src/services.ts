@@ -1,0 +1,90 @@
+import {
+  ConsoleLogger,
+  InMemorySessionStore,
+  LocalCredentialService,
+  LocalSecretService,
+  LocalVariablesService,
+  QueueWebhookService,
+} from '@pikku/core/services'
+import { LocalEventHubService } from '@pikku/core/channel/local'
+import { CFWorkerSchemaService } from '@pikku/schema-cfworker'
+import { JoseJWTService } from '@pikku/jose'
+import { pikkuServices, pikkuWireServices } from '#pikku/setup'
+import { TodoStore } from './services/store.service.js'
+import { requiredSingletonServices } from '#pikku/pikku-services.gen.js'
+
+/**
+ * Creates singleton services for the todo app.
+ */
+export const createSingletonServices = pikkuServices(
+  async (config, existingServices) => {
+    const variables = existingServices?.variables || new LocalVariablesService()
+    const logger = new ConsoleLogger()
+    const schema = new CFWorkerSchemaService(logger)
+    const secrets = new LocalSecretService(variables)
+
+    let metaService = existingServices?.metaService
+    if (requiredSingletonServices.metaService) {
+      if (!metaService) {
+        const { PikkuMetaService } =
+          await import('#pikku/services/pikku-meta-service.gen.js')
+        metaService = new PikkuMetaService()
+      }
+    }
+
+    const jwt = new JoseJWTService(async () => {
+      const keys: Array<{ id: string; value: string }> = []
+      for (const [id, secretName] of Object.entries(config.jwtSecrets ?? {})) {
+        try {
+          keys.push({
+            id,
+            value: (await secrets.getSecret(secretName)).reveal(),
+          })
+        } catch {}
+      }
+      return keys
+    })
+
+    const queueService = existingServices?.queueService
+
+    return {
+      config,
+      logger,
+      variables,
+      schema,
+      secrets,
+      jwt,
+      kysely: existingServices?.kysely,
+      todoStore: existingServices?.todoStore || new TodoStore(),
+      agentStorage: existingServices?.agentStorage,
+      agentRunner: existingServices?.agentRunner,
+      agentRunState: existingServices?.agentRunState,
+      agentRunService: existingServices?.agentRunService,
+      eventHub: existingServices?.eventHub || new LocalEventHubService(),
+      workflowService: existingServices?.workflowService,
+      workflowRunService: existingServices?.workflowRunService,
+      queueService,
+      // Outgoing webhooks are delivered through the queue, so there is no
+      // webhook service to offer without one.
+      webhookService:
+        existingServices?.webhookService ??
+        (queueService ? new QueueWebhookService(queueService) : undefined),
+      schedulerService: existingServices?.schedulerService,
+      deploymentService: existingServices?.deploymentService,
+      credentialService:
+        existingServices?.credentialService || new LocalCredentialService(),
+      sessionStore:
+        existingServices?.sessionStore || new InMemorySessionStore(),
+      metaService,
+    }
+  }
+)
+
+/**
+ * Creates per-request wire services.
+ */
+export const createWireServices = pikkuWireServices(
+  async (_singletonServices, _session) => {
+    return {}
+  }
+)
